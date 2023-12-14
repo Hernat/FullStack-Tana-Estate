@@ -167,3 +167,18 @@ export const createResidency = async (data) => {
         throw error
     }
 }
+
+// delete residency
+
+export const deleteResidency = async (id, email) => {
+    try {
+        const res = await api.post(`/residency/deleteResidency/${id}`, {
+            email,
+        })
+
+        return res.data
+    } catch (error) {
+        toast.error('Something went wrong, Please try again')
+        throw error
+    }
+}
