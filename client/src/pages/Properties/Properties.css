@@ -1,0 +1,21 @@
+.pro-wrapper {
+    padding-top: 5rem;
+}
+.pro-container {
+    gap: 2rem;
+}
+.pro-container .search-bar {
+    width: clamp(12rem, 100%, 28rem);
+    border-radius: 30px;
+}
+
+.pro-container .search-bar .button {
+    border-radius: 30px;
+    font-size: 12px;
+    padding: 10px 15px;
+}
+
+.pro-container .search-bar input {
+    width: 75%;
+    padding-left: 0.5rem;
+}

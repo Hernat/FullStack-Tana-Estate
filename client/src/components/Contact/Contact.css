@@ -1,0 +1,111 @@
+.c-container {
+    justify-content: space-between;
+}
+
+.c-container > div {
+    flex: 1;
+}
+
+.c-right {
+    width: 100%;
+}
+
+.c-left {
+    gap: 0.5rem;
+}
+
+.contactModes {
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.contactModes .row {
+    gap: 1.5rem;
+}
+.mode {
+    width: 16rem;
+    padding: 1rem;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    gap: 1rem;
+    transition: all 300ms ease-in;
+    border-radius: 5px;
+}
+
+.mode .button {
+    width: 100%;
+    background: #b5bcd1;
+    color: #061d5c;
+    font-weight: 600;
+}
+
+.mode > :nth-child(1) {
+    width: 100%;
+    gap: 1.6rem;
+}
+
+.mode .detail .primaryText {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.mode:hover {
+    scale: 1.05;
+    box-shadow: var(--shadow);
+}
+
+.mode .button:hover {
+    background: #203776;
+    color: #cdd3e1;
+    scale: 0.88;
+    font-size: 0.99rem;
+}
+.c-right .image-container {
+    width: 35rem;
+    height: 35rem;
+    border: 8px solid #072167;
+}
+
+.image-container > img {
+    width: auto;
+    height: 100%;
+}
+
+@media (max-width: 1024px) {
+    .c-container {
+        flex-wrap: wrap;
+    }
+    .c-right {
+        justify-content: center;
+        display: flex;
+    }
+    .contactModes {
+        width: 100%;
+    }
+
+    .row {
+        align-items: center;
+    }
+    @media (max-width: 658px) {
+        .c-container {
+            flex-direction: column;
+        }
+        .row {
+            flex-direction: column;
+            width: 100%;
+        }
+        .mode {
+            width: 100%;
+        }
+        .c-right .image-container {
+            width: 75%;
+            height: 25rem;
+        }
+    }
+
+    @media (max-width: 456px) {
+        .c-right .image-container {
+            width: 95%;
+            height: 25rem;
+        }
+    }
+}
