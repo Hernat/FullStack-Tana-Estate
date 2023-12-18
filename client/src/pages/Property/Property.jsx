@@ -43,7 +43,7 @@ const Property = () => {
         onSuccess: () => {
             setUserDetails((prev) => ({
                 ...prev,
-                bookings: prev.bookings.filter(
+                bookings: prev?.bookings.filter(
                     (booking) => booking?.id !== propertyId
                 ),
             }))
