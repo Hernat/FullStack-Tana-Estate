@@ -11,12 +11,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <Auth0Provider
             domain="dev-8z7ps75p60nb6lgc.us.auth0.com"
-            //domain="dev-8z7ps75p60nb6lgc.us.auth0.com"
             clientId="AcmukBYnyB492tJT9pYcZmBu4eUwgneJ"
-            // clientId="6XRi7S8iwCXIyhSFekRP4q5dVElo84QX"
             authorizationParams={{
                 redirect_uri: 'https://tana-estate.vercel.app',
             }}
+            //===============OFFLINE=============
+
+            // domain="dev-8z7ps75p60nb6lgc.us.auth0.com"
+            // clientId="6XRi7S8iwCXIyhSFekRP4q5dVElo84QX"
             // authorizationParams={{
             //     redirect_uri: 'http://localhost:5173',
             // }}

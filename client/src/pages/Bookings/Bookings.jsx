@@ -49,10 +49,12 @@ function Bookings() {
                     style={{ gap: '1rem' }}
                 >
                     {data
-                        .filter((property) =>
-                            bookings?.bookings
-                                .map((booking) => booking.id)
-                                .includes(property.id)
+                        .filter(
+                            (property) =>
+                                bookings &&
+                                bookings
+                                    .map((booking) => booking.id)
+                                    .includes(property.id)
                         )
                         .filter(
                             (property) =>
