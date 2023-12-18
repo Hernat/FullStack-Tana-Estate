@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             domain="dev-8z7ps75p60nb6lgc.us.auth0.com"
             clientId="AcmukBYnyB492tJT9pYcZmBu4eUwgneJ"
             authorizationParams={{
-                redirect_uri: 'http://localhost:5173',
+                redirect_uri: 'https://tana-estate.vercel.app',
             }}
             audience="http://localhost:8000"
             scope="openid profile email"
