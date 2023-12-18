@@ -1,10 +1,13 @@
 import './Hero.css'
-import SearchBar from '../SearchBar/SearchBar'
 
 import CountUp from 'react-countup'
 import { motion } from 'framer-motion'
+import { Button } from '@mantine/core'
+import { useNavigate } from 'react-router-dom'
 
 const Hero = () => {
+    const navigate = useNavigate()
+
     return (
         <section className="hero-wrapper">
             <div className="paddings innerWidth  flexCenter hero-container">
@@ -17,27 +20,36 @@ const Hero = () => {
                             animate={{ y: '0', opacity: 1 }}
                             transition={{ duration: 2, type: 'spring' }}
                         >
-                            Découvrez <br />
-                            la propriété <br /> la plus adaptée <br />à vos
-                            besoins !
+                            Discover the most <br /> suitable property <br />
+                            for your needs needs !
                         </motion.h1>
                     </div>
 
                     <div className="flexColStart hero-des">
                         <span className="secondaryText">
-                            Trouvez votre chez-vous parfait parmi notre
-                            sélection variée de biens immobiliers.
-                            <br /> Notre équipe est là pour vous aider à chaque
-                            étape de votre recherche.
+                            Find your perfect home among our varied selection of
+                            real estate.
+                            <br /> Our team is here to help you every time stage
+                            of your research.
                         </span>
                     </div>
 
-                    <SearchBar />
+                    <Button
+                        variant="gradient"
+                        size="lg"
+                        radius="xl"
+                        gradient={{ from: 'indigo', to: 'orange', deg: 90 }}
+                        onClick={() =>
+                            navigate('./properties', { replace: true })
+                        }
+                    >
+                        Visit Properties
+                    </Button>
 
                     <div className="flexCenter stats">
                         <div className="flexColCenter stat">
                             <span>
-                                <CountUp start={8800} end={9000} duration={4} />
+                                <CountUp start={800} end={900} duration={4} />
                                 <span>+</span>
                             </span>
                             <span className="secondaryText">
@@ -47,7 +59,7 @@ const Hero = () => {
 
                         <div className="flexColCenter stat">
                             <span>
-                                <CountUp start={1850} end={2000} duration={4} />
+                                <CountUp start={180} end={200} duration={4} />
                                 <span>+</span>
                             </span>
                             <span className="secondaryText">
@@ -57,7 +69,7 @@ const Hero = () => {
 
                         <div className="flexColCenter stat">
                             <span>
-                                <CountUp end={28} />
+                                <CountUp end={7} />
                                 <span>+</span>
                             </span>
                             <span className="secondaryText">Award Wining</span>
